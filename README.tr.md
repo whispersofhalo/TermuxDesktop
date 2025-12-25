@@ -85,31 +85,12 @@ Masaüstü ortamını başlatmak için :
 ```bash
 bash ~/startxfce4_termux.sh
 ```
-# 🖌️ Güzel Bir Görünüm İçin Tema Kurulumu🎨
-Kurulumdan sonra xfce4 masaüstü ortamında daha güzel şık bir görünüm için tema kurabilirsiniz şu görselde ki tema için :
-
-Özel terminal kitty :
-```bash
-pkg install kitty
-```
-Kitty teması için öncelikle dosyalardan home ekranına giriyoruz ordan view kısmından gizli dosyaları göster diyoruz 
-.config/kitty buraya kitty.conf adında bir dosya oluşturuyoruz ve su kodu içine yapıştırıyoruz :
-
-```bash
-https://raw.githubusercontent.com/whispersofhalo/TermuxDE/refs/heads/main/kitty
-```
-
-Duvar kağıdı : 
-```bash
-https://gruvbox-wallpapers.pages.dev/wallpapers/minimalistic/great-wave-of-kanagawa-gruvbox.png
-```
 
 # 📱 Sosyal Medya & İletişim 📬
 Bağlantıda kalın ve güncellemeleri alın:
 
 [GitHub](https://github.com/Mitreightt)
 
-[Discord](https://discord.com/invite/uZ2jRXWCnU)
 
 [Instagram](https://www.instagram.com/nonicknofunn)
 
