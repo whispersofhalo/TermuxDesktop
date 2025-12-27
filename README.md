@@ -64,10 +64,6 @@ sudo whoami
 # ⚙️ Installing Desktops <a name=installing-desktops></a> 
 
 * How to install XFCE4
-
-```
-Commands:
-```
 ```
 proot-distro login debian --user whispersofhalo
 ```
@@ -77,7 +73,6 @@ sudo apt install xfce4
 
 * How to install LXDE
 ```
-# Commands: 
 proot-distro login debian --user whispersofhalo
 ```
 ```
@@ -86,7 +81,6 @@ sudo apt install lxde
 
 * How to install Cinnamon
 ```
-# Commands: 
 proot-distro login debian --user whispersofhalo
 ```
 ```
@@ -95,7 +89,6 @@ sudo apt install cinnamon -y
 
 * How to install GNOME
 ```
-# Commands: 
 proot-distro login debian --user whispersofhalo
 ```
 ```
@@ -107,8 +100,7 @@ done
 ```
 
 * How to install KDE Plasma - Not recommended due to performance issues (KDE Plasma requires more resources)
-```
-# Commands: 
+``` 
 proot-distro login debian --user whispersofhalo
 ```
 ```
