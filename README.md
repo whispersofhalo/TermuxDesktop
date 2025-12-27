@@ -8,6 +8,8 @@
 ## 🏁 First steps <a name=first-steps></a>
 We are going to use Termux and Termux X11 in order to have a full Linux Desktop in our Android devices. 
 
+Termux (https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk)
+
 
 # How to install a Linux Distro on Termux with proot-distro (No Root)
 
