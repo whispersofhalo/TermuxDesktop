@@ -8,8 +8,13 @@
 ## 🏁 İlk adımlar <a name=ilk-adımlar></a>
 Android cihazlarımızda tam bir Linux Masaüstü'ne sahip olmak için Termux ve Termux X11'i kullanacağız.
 
+# Linkler
 
-# proot-distro ile Termux'a Linux Dağıtımı nasıl kurulur (Root gerekmez)
+Termux [https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk]
+
+Termux x11 [https://github.com/termux/termux-x11/releases/download/nightly/app-arm64-v8a-debug.apk]
+
+# Proot-distro ile Termux'a Linux Dağıtımı nasıl kurulur (Root gerekmez)
 
  
 
@@ -30,7 +35,7 @@ proot-distro login debian
 </details>
 
 
-# [Komutlar ]sudo ayrıcalıklarına sahip bir kullanıcı oluşturun
+# [Komutlar]sudo ayrıcalıklarına sahip bir kullanıcı oluşturun
 
 
 
