@@ -13,7 +13,7 @@ We are going to use Termux and Termux X11 in order to have a full Linux Desktop 
 <details>
 <summary><strong> [Commands] How to install a Linux Distro on Termux with proot-distro (No Root)</strong></summary>
 
-The written steps are the following ones: 
+ 
 
 1. Open Termux
 2. Install proot-distro  
