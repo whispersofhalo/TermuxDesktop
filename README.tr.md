@@ -81,6 +81,115 @@ sudo apt install lxde
 
 * Cinnamon nasıl kurulur?
 ```
-proot-distro login debian --user whispersofh
+proot-distro login debian --user whispersofhalo
+```
+```
+sudo apt install cinnamon -y
+```
 
-Translated with DeepL.com (free version)
+* GNOME nasıl kurulur
+```
+proot-distro login debian --user whispersofhalo
+```
+```
+sudo apt install dbus-x11 nano gnome gnome-shell gnome-terminal gnome-tweaks gnome-software nautilus gnome-shell-extension-manager gedit tigervnc-tools gnupg2 -y
+```
+```
+for file in $(find /usr -type f -iname “*login1*”); do rm -rf $file
+done
+```
+
+* KDE Plasma'yı yükleme - Performans sorunları nedeniyle önerilmez (KDE Plasma daha fazla kaynak gerektirir)
+``` 
+proot-distro login debian --user whispersofhalo
+```
+```
+sudo apt install kde-plasma-desktop
+```
+
+---  
+<br>
+
+## 💻 Termux X11 ile kullanmak için Masaüstlerini Çalıştırma <a name=masaüstlerini-çalıştırma></a>
+Bu depodaki tüm komut dosyaları, farklı Masaüstlerini sesli olarak kolay bir şekilde çalıştırmak için hazırlanmıştır. 
+
+Öncelikle Termux'a aşağıdaki paketleri yüklemeniz gerekir: 
+```
+pkg update
+pkg install x11-repo
+pkg install termux-x11-nightly
+pkg install pulseaudio
+pkg install wget
+```
+
+## ⬇️ Komut dosyalarını kolayca indirin: <a name=kolay-indirme></a> 
+
+> [!NOT]  
+> Varsayılan olarak bu komut dosyası “whispersofhalo” kullanıcısıyla çalışır. Proot-distro'da farklı bir isimle kullanıcı oluşturursanız, komut dosyalarının içindeki “whispersofhalo” yazan yeri değiştirin.
+
+* startgnome_debian.sh
+```
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startgnome_debian.sh
+```
+
+* startxfce4_debian.sh
+```
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startxfce4_debian.sh
+```
+
+* startlxde_debian.sh
+```
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startlxde_debian.sh
+```
+
+* startcinnamon_debian.sh
+```
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startcinnamon_debian.sh
+```
+
+* startkde_debian.sh
+```
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startkde_debain.sh
+```
+---  
+<br>
+
+Ardından, yüklediğiniz Masaüstü'ye karşılık gelen komut dosyasını indirmeniz, onu çalıştırma izni vermeniz ve çalıştırmanız yeterlidir (proot-distro'da değil, Termux'ta): 
+* startgnome_debian.sh
+```
+chmod +x startgnome_debian.sh
+./startgnome_debian.sh
+```
+* startxfce4_debian.sh
+```
+chmod +x startxfce4_debian.sh
+./startxfce4_debian.sh
+```
+* startlxde_debian.sh
+```
+chmod +x startlxde_debian.sh
+./startxlxde_debian.sh
+```
+* startcinnamon_debian.sh
+```
+chmod +x startcinnamon_debian.sh
+./startcinnamon_debian.sh
+```
+* startkde_debian.sh
+```
+chmod +x startkde_debian.sh
+./startkde_debian.sh
+```
+---  
+<br>
+
+# 📱 Sosyal Medya ve İletişim 📬
+Bağlantıda kalın ve güncellemeleri alın:
+
+- [GitHub](https://github.com/WhispersOfHalo)
+
+- [Instagram](https://www.instagram.com/whispersofhalo)
+
+- [Linktree](https://linktr.ee/whispersofhalo)
+
+Sorularınız, geri bildirimleriniz veya işbirliği yapmak istiyorsanız lütfen bizimle iletişime geçin!
