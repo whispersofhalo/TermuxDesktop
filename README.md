@@ -47,7 +47,7 @@ adduser whispersofhalo
 ```
 nano /etc/sudoers
 ```
-Add the following line to the file under root ALL=(ALL:ALL) ALL 
+Add the following line to the file under : root ALL=(ALL:ALL) ALL 
 ```
 whispersofhalo ALL=(ALL:ALL) ALL
 ```
