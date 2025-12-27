@@ -19,7 +19,7 @@ We are going to use Termux and Termux X11 in order to have a full Linux Desktop 
 pkg update
 pkg install proot-distro
 ```
-3. Install Debian (or the distro you prefer)
+3. Install Debian
 ```
 proot-distro install debian
 ```
@@ -46,8 +46,9 @@ adduser whispersofhalo
 3. Give the user sudo privileges
 ```
 nano /etc/sudoers
-
-# Add the following line to the file
+```
+Add the following line to the file under root ALL=(ALL:ALL) ALL 
+```
 whispersofhalo ALL=(ALL:ALL) ALL
 ```
 4. Check you can execute sudo commands (it should return `root`)
