@@ -12,6 +12,7 @@ We are going to use Termux and Termux X11 in order to have a full Linux Desktop 
 # Links
 
 Termux [https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk]
+
 Termux x11 [https://github.com/termux/termux-x11/releases/download/nightly/app-arm64-v8a-debug.apk]
 
 
