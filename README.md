@@ -10,7 +10,7 @@
 ## 🏁 First steps <a name=first-steps></a>
 We are going to use Termux and Termux X11 in order to have a full Linux Desktop in our Android devices. 
 
-<details>
+
 <summary><strong> [Commands] How to install a Linux Distro on Termux with proot-distro (No Root)</strong></summary>
 
  
