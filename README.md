@@ -64,12 +64,7 @@ sudo whoami
 
 # ⚙️ Installing Desktops <a name=installing-desktops></a> 
 
-I have installed different desktops, if you want me to test any other just leave a comment in any video and I will check it: 
-
-> [!NOTE]
-> In the videos I'm using VNC but with Termux X11 installing the tigervnc server and dbus is no longer required.
-
-* [[Video] How to install XFCE4](https://www.youtube.com/watch?v=LO8LWh5tPg8&list=PL4worxVHtqXo8EPHfLcoy5tPwjVSaqdB5&index=6)
+* How to install XFCE4
 
 ```
 # Commands: 
