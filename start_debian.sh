@@ -1,23 +1,39 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
-# Kill all old prcoesses
-killall -9 termux-x11 Xwayland pulseaudio virgl_test_server_android termux-wake-lock
+# === AYARLAR ===
+DEBIANPATH="/data/local/tmp/chrootDebian"
+USER_NAME="whispersofhalo"
+DISPLAY_NUM=":0"
 
-## Start Termux X11
-am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity
+# === TERMUX X11 ===
+export DISPLAY=$DISPLAY_NUM
+export XDG_RUNTIME_DIR=/tmp
 
-sudo busybox mount --bind $PREFIX/tmp /data/local/tmp/chrootDebian/tmp
+# Termux:X11 zaten açıksa sorun olmaz
+termux-x11 $DISPLAY_NUM &
 
-XDG_RUNTIME_DIR=${TMPDIR} termux-x11 :0 -ac &
+sleep 2
 
-sleep 3
+# === ROOT YETKİSİ ===
+su <<EOF
 
-# Start Pulse Audio of Termux
-pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
+# === GEREKLİ MOUNT'LAR ===
+mount --bind /dev  $DEBIANPATH/dev
+mount --bind /proc $DEBIANPATH/proc
+mount --bind /sys  $DEBIANPATH/sys
+mount -t devpts devpts $DEBIANPATH/dev/pts
 
-# Start virgl server
-#virgl_test_server_android &
+# === CHROOT ===
+chroot $DEBIANPATH /bin/bash <<EOC
 
-# Execute chroot Debian script
-su -c "sh /data/local/tmp/start_debian.sh"
+source /etc/profile
+export DISPLAY=$DISPLAY_NUM
+export XDG_RUNTIME_DIR=/tmp
+export HOME=/home/$USER_NAME
+export USER=$USER_NAME
+
+# === KULLANICIYA GEÇ VE KDE'Yİ BAŞLAT ===
+su - $USER_NAME -c "dbus-launch startplasma-x11"
+
+EOC
+EOF
