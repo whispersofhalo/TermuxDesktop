@@ -127,15 +127,6 @@ pkg install pulseaudio
 pkg install wget
 ```
 
-Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it (in Termux, not in proot-distro): 
-```
-chmod +x startxfce4_debian.sh
-./startxfce4_debian.sh
-```
-
----  
-<br>
-
 ## ⬇️ Download scripts easily: <a name=easy-download></a> 
 
 > [!NOTE]  
@@ -167,6 +158,16 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 ```
 ---  
 <br>
+
+Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it (in Termux, not in proot-distro): 
+```
+chmod +x startxfce4_debian.sh
+./startxfce4_debian.sh
+```
+
+---  
+<br>
+
 
 # 📱 Social Media & Contact 📬
 Stay connected and get updates:
