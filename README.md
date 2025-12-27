@@ -66,7 +66,9 @@ sudo whoami
 * How to install XFCE4
 
 ```
-# Commands: 
+Commands:
+```
+```
 proot-distro login debian --user whispersofhalo
 ```
 ```
