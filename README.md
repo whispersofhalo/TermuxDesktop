@@ -66,34 +66,34 @@ sudo whoami
 
 ```
 # Commands: 
-proot-distro login debian --user droidmaster
+proot-distro login debian --user whispersofhalo
 ```
 ```
 sudo apt install xfce4
 ```
 
-* [[Video] How to install LXDE](https://www.youtube.com/watch?v=9b9_9YNsCXc)
+* How to install LXDE
 ```
 # Commands: 
-proot-distro login debian --user droidmaster
+proot-distro login debian --user whispersofhalo
 ```
 ```
 sudo apt install lxde
 ```
 
-* [[Video] How to install Cinnamon](https://youtu.be/_wZO5RZu2R8?feature=shared)
+* How to install Cinnamon
 ```
 # Commands: 
-proot-distro login debian --user droidmaster
+proot-distro login debian --user whispersofhalo
 ```
 ```
 sudo apt install cinnamon -y
 ```
 
-* [[Video] How to install GNOME](https://www.youtube.com/watch?v=XedxyTTHYnI)
+* How to install GNOME
 ```
 # Commands: 
-proot-distro login debian --user droidmaster
+proot-distro login debian --user whispersofhalo
 ```
 ```
 sudo apt install dbus-x11 nano gnome gnome-shell gnome-terminal gnome-tweaks gnome-software nautilus gnome-shell-extension-manager gedit tigervnc-tools gnupg2 -y
@@ -103,10 +103,10 @@ for file in $(find /usr -type f -iname "*login1*"); do rm -rf $file
 done
 ```
 
-* [[Video] How to install KDE Plasma](https://www.youtube.com/watch?v=fru4SWvUowI&list=PL4worxVHtqXo8EPHfLcoy5tPwjVSaqdB5&index=2)  - Not recommended due to performance issues (KDE Plasma requires more resources)
+* How to install KDE Plasma - Not recommended due to performance issues (KDE Plasma requires more resources)
 ```
 # Commands: 
-proot-distro login debian --user droidmaster
+proot-distro login debian --user whispersofhalo
 ```
 ```
 sudo apt install kde-plasma-desktop
@@ -140,7 +140,7 @@ chmod +x startxfce4_debian.sh
 ## ⬇️ Download scripts easily: <a name=easy-download></a> 
 
 > [!NOTE]  
-> By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts.
+> By default this script works with the user "whispersofhalo". If you create a user with a different name in proot-distro, please change where it says "whispersofhalo" inside the scripts.
 
 * startgnome_debian.sh
 ```
@@ -172,12 +172,10 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 # 📱 Social Media & Contact 📬
 Stay connected and get updates:
 
-- [GitHub](https://github.com/Mitreightt)
+- [GitHub](https://github.com/WhispersOfHalo)
 
-- [Discord](https://discord.com/invite/uZ2jRXWCnU)
+- [Instagram](https://www.instagram.com/whispersofhalo)
 
-- [Instagram](https://www.instagram.com/nonicknofunn)
-
-- [Linktree](https://linktr.ee/mitreight)
+- [Linktree](https://linktr.ee/whispersofhalo)
 
 Feel free to reach out if you have questions, feedback, or want to collaborate!
