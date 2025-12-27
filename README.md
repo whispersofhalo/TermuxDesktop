@@ -1,90 +1,194 @@
-# 📄 Available Languages: [English](README.md) | [Türkçe](README.tr.md)
+# 📚 Index
 
-# 🌐 Desktop Environment on Android via Termux 🚀
+## PROOT-DISTRO (🍥 DEBIAN)
+* 🏁 [First steps](#first-steps)
+* ⚙️ [Installing Desktops](#installing-desktops)
+* 💻 [Running the Desktops to use them with Termux X11](#running-desktops)
+* ⬇️ [Download scripts to run the desktops](#easy-download)
+* 🎨 [Customizations - Themes](#customizations)
 
-This project provides a step-by-step guide for setting up a **lightweight desktop environment** on your Android device using **Termux**. Experience a mini Linux PC right from your phone! Perfect for developers, tinkerers, or anyone curious about mobile Linux setups.
+<br>
 
-# 📋 Getting Started 🛠️
+---  
+---  
 
-- # ✅ 1. Ensure Requirements Are Met:
+<br>
 
-- Android 8+ device 
+## 🏁 First steps <a name=first-steps></a>
+We are going to use Termux and Termux X11 in order to have a full Linux Desktop in our Android devices. 
 
-- [Termux](https://github.com/termux/termux-app/releases/download/v0.118.2/termux-app_v0.118.2+github-debug_arm64-v8a.apk)
+* [[Video] How to install Termux](https://www.youtube.com/watch?v=OMJAyq5NHp0)
 
-- [Termux:X11](https://github.com/termux/termux-x11/releases/download/nightly/app-arm64-v8a-debug.apk)
+* [[Video] How to install and use Termux X11](https://www.youtube.com/watch?v=mXkXzFqSeYE)
 
-- Minimum 2GB of RAM (3GB recommended)
+* [[Video] How to install a COMPLETE Linux environtment on ANDROID - Customizing XFCE4 - Neon theme - No Root](https://www.youtube.com/watch?v=rDHyPw_7ETs)
 
-- 1.5-2GB of Internet data
+<details>
+<summary><strong> [Commands] How to install a Linux Distro on Termux with proot-distro (No Root)</strong></summary>
 
-- 3-4GB of free storage
+You can check the video described in the First Steps section. The written steps are the following ones: 
 
-- # 🎨 2. Explore Desktop Styles:
-
-- XFCE
-
-- LXQt
-
-- OPENBOX
-
----
-
-## ⚙️ Installation Steps 🧩
-
-Follow these instructions to get your desktop environment up and running. Replace the placeholders with your actual commands and explanations:
-
-- # 🔄 Update Termux 🔧
-
-```bash
+1. Open Termux
+2. Install proot-distro  
+```
 pkg update
-pkg upgrade
+pkg install proot-distro
+```
+3. Install Debian (or the distro you prefer)
+```
+proot-distro install debian
+```
+4 Log in to the distro 
+```
+proot-distro login debian
+```
+</details>
+
+<details>
+<summary><strong>[Commands ]Create an user with sudo privileges</summary></strong>
+
+The steps are described in the video linked in the previous point. 
+
+1. Install needed packages
+```
+apt update -y
+apt install sudo nano adduser -y
+```
+2. Create an user
+```
+adduser droidmaster
+```
+3. Give the user sudo privileges
+```
+nano /etc/sudoers
+
+# Add the following line to the file
+droidmaster ALL=(ALL:ALL) ALL
+```
+4. Check you can execute sudo commands (it should return `root`)
+```
+sudo whoami 
+```  
+
+</details>  
+
+---  
+<br>
+
+# ⚙️ Installing Desktops <a name=installing-desktops></a> 
+
+I have installed different desktops, if you want me to test any other just leave a comment in any video and I will check it: 
+
+> [!NOTE]
+> In the videos I'm using VNC but with Termux X11 installing the tigervnc server and dbus is no longer required.
+
+* [[Video] How to install XFCE4](https://www.youtube.com/watch?v=LO8LWh5tPg8&list=PL4worxVHtqXo8EPHfLcoy5tPwjVSaqdB5&index=6)
+
+```
+# Commands: 
+proot-distro login debian --user droidmaster
+```
+```
+sudo apt install xfce4
+```
+
+* [[Video] How to install LXDE](https://www.youtube.com/watch?v=9b9_9YNsCXc)
+```
+# Commands: 
+proot-distro login debian --user droidmaster
+```
+```
+sudo apt install lxde
+```
+
+* [[Video] How to install Cinnamon](https://youtu.be/_wZO5RZu2R8?feature=shared)
+```
+# Commands: 
+proot-distro login debian --user droidmaster
+```
+```
+sudo apt install cinnamon -y
+```
+
+* [[Video] How to install GNOME](https://www.youtube.com/watch?v=XedxyTTHYnI)
+```
+# Commands: 
+proot-distro login debian --user droidmaster
+```
+```
+sudo apt install dbus-x11 nano gnome gnome-shell gnome-terminal gnome-tweaks gnome-software nautilus gnome-shell-extension-manager gedit tigervnc-tools gnupg2 -y
+```
+```
+for file in $(find /usr -type f -iname "*login1*"); do rm -rf $file
+done
+```
+
+* [[Video] How to install KDE Plasma](https://www.youtube.com/watch?v=fru4SWvUowI&list=PL4worxVHtqXo8EPHfLcoy5tPwjVSaqdB5&index=2)  - Not recommended due to performance issues (KDE Plasma requires more resources)
+```
+# Commands: 
+proot-distro login debian --user droidmaster
+```
+```
+sudo apt install kde-plasma-desktop
+```
+
+---  
+<br>
+
+## 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
+All the scripts in this repository are prepared to run the different Desktops with audio in an easy way. 
+
+First you need to install the following packages in Termux: 
+```
+pkg update
 pkg install x11-repo
 pkg install termux-x11-nightly
 pkg install pulseaudio
 pkg install wget
 ```
 
-- # 💻 Install Desktop Environment 🖥️
-Currently only XFCE, LXQT and OPENBOX desktop environments work on android termux. **For now only XFCE is working.**
-
-For XFCE desktop environment :
-```bash
-pkg install xfce4
+Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it (in Termux, not in proot-distro): 
 ```
-For LXQT desktop environment :
-```bash
-pkg install lxqt
-```
-For OPENBOX desktop environment :
-```bash
-pkg install openbox
+# Download the script to Termux
+chmod +x startxfce4_debian.sh
+./startxfce4_debian.sh
 ```
 
-- # 🌐 Install Browser : 🌍
-Currently only chromium and firefox browsers work.
+---  
+<br>
 
-For Firefox browser :
-```bash
-pkg install tur-repo
-pkg install firefox
-```
-For Chromium browser :
-```bash
-pkg install tur-repo
-pkg install chromium
-```
-- # ⬇️ Download Script To Start Desktop Environment 📥
-To start the desktop environment via effortless termux after installation :
-```bash
-cd ~
+## ⬇️ Download scripts easily: <a name=easy-download></a> 
 
-wget https://raw.githubusercontent.com/whispersofhalo/TermuxDE/refs/heads/main/startxfce4_termux.sh
+> [!NOTE]  
+> By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts.
+
+* startgnome_debian.sh
 ```
-To start the desktop environment, run this :
-```bash
-bash ~/startxfce4_termux.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startgnome_debian.sh
 ```
+
+* startxfce4_debian.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startxfce4_debian.sh
+```
+
+* startlxde_debian.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startlxde_debian.sh
+```
+
+* startcinnamon_debian.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startcinnamon_debian.sh
+```
+
+* startkde_debian.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startkde_debian.sh
+```
+---  
+<br>
+
 # 📱 Social Media & Contact 📬
 Stay connected and get updates:
 
