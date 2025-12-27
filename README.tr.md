@@ -124,7 +124,7 @@ pkg install wget
 
 ## ⬇️ Komut dosyalarını kolayca indirin: <a name=kolay-indirme></a> 
 
-> [!NOT]  
+> [!NOTE]  
 > Varsayılan olarak bu komut dosyası “whispersofhalo” kullanıcısıyla çalışır. Proot-distro'da farklı bir isimle kullanıcı oluşturursanız, komut dosyalarının içindeki “whispersofhalo” yazan yeri değiştirin.
 
 * startgnome_debian.sh
