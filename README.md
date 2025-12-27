@@ -9,7 +9,7 @@
 We are going to use Termux and Termux X11 in order to have a full Linux Desktop in our Android devices. 
 
 
-<summary><strong> [Commands] How to install a Linux Distro on Termux with proot-distro (No Root)</strong></summary>
+# How to install a Linux Distro on Termux with proot-distro (No Root)
 
  
 
@@ -30,7 +30,7 @@ proot-distro login debian
 </details>
 
 
-<summary><strong>[Commands ]Create an user with sudo privileges</summary></strong>
+# [Commands ]Create an user with sudo privileges
 
 
 
