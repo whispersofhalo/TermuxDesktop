@@ -1,5 +1,3 @@
-# 📚 Index
-
 ## PROOT-DISTRO (🍥 DEBIAN)
 * 🏁 [First steps](#first-steps)
 * ⚙️ [Installing Desktops](#installing-desktops)
