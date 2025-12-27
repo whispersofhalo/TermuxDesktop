@@ -34,7 +34,7 @@ proot-distro login debian
 
 <summary><strong>[Commands ]Create an user with sudo privileges</summary></strong>
 
-The steps are described in the video linked in the previous point. 
+
 
 1. Install needed packages
 ```
