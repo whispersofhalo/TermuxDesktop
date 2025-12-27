@@ -134,37 +134,57 @@ pkg install wget
 
 * startgnome_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startgnome_debian.sh
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startgnome_debian.sh
 ```
 
 * startxfce4_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startxfce4_debian.sh
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startxfce4_debian.sh
 ```
 
 * startlxde_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startlxde_debian.sh
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startlxde_debian.sh
 ```
 
 * startcinnamon_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startcinnamon_debian.sh
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startcinnamon_debian.sh
 ```
 
 * startkde_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startkde_debian.sh
+wget https://raw.githubusercontent.com/whispersofhalo/TermuxDesktop/refs/heads/main/startkde_debain.sh
 ```
 ---  
 <br>
 
 Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it (in Termux, not in proot-distro): 
+* startgnome_debian.sh
+```
+chmod +x startgnome_debian.sh
+./startgnome_debian.sh
+```
+* startxfce4_debian.sh
 ```
 chmod +x startxfce4_debian.sh
 ./startxfce4_debian.sh
 ```
-
+* startlxde_debian.sh
+```
+chmod +x startlxde_debian.sh
+./startxlxde_debian.sh
+```
+* startcinnamon_debian.sh
+```
+chmod +x startcinnamon_debian.sh
+./startcinnamon_debian.sh
+```
+* startkde_debian.sh
+```
+chmod +x startkde_debian.sh
+./startkde_debian.sh
+```
 ---  
 <br>
 
