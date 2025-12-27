@@ -43,14 +43,14 @@ apt install sudo nano adduser -y
 ```
 2. Create an user
 ```
-adduser droidmaster
+adduser whispersofhalo
 ```
 3. Give the user sudo privileges
 ```
 nano /etc/sudoers
 
 # Add the following line to the file
-droidmaster ALL=(ALL:ALL) ALL
+whispersofhalo ALL=(ALL:ALL) ALL
 ```
 4. Check you can execute sudo commands (it should return `root`)
 ```
