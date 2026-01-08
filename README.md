@@ -1,3 +1,6 @@
+## LANGUAGE : TR #README.TR.md
+
+
 ## PROOT-DISTRO (🍥 DEBIAN)
 * 🏁 [First steps](#first-steps)
 * ⚙️ [Installing Desktops](#installing-desktops)
