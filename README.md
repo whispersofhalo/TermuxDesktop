@@ -1,4 +1,4 @@
-## LANGUAGE : TR #README.TR.md
+## LANGUAGE : TR (README.tr.md)
 
 
 ## PROOT-DISTRO (🍥 DEBIAN)
