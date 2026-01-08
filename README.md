@@ -1,4 +1,4 @@
-## LANGUAGE : TR (README.tr.md)
+## LANGUAGE: [🇹🇷 Türkçe](README.tr.md)
 
 
 ## PROOT-DISTRO (🍥 DEBIAN)
